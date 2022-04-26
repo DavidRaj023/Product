@@ -10,12 +10,11 @@ const Stock = sequelize.define("stock", {
         allowNull: false,
         primaryKey: true
     },
-    quantity: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0
-    },
     batch: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    quantity: {
         type: Sequelize.INTEGER,
         allowNull: false,
         defaultValue: 0

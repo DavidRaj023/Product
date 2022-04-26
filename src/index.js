@@ -18,10 +18,13 @@ app.use(express.json());
 appRouter(app);
 
 //Define relations between tables
-Product.hasMany(Sales);
-Product.hasOne(Stock);
-Sales.belongsTo(Product);
+Product.hasMany(Stock);
 Product.hasMany(Price);
+Product.hasMany(Sales);
+Sales.belongsTo(Product);
+Sales.belongsTo(Stock);
+
+Stock.hasMany(Price)
 
 //{ force: true }
 sequelize.sync().then((result) => {

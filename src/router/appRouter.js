@@ -6,7 +6,9 @@ let routes = (app) => {
     try {
         router.post('/api/v1/product', Controller.addProduct);
         router.post('/api/v1/sales', Controller.addSales);
-        router.get('/api/v1/report', Controller.report);
+        router.post('/api/v1/product/search', Controller.productSearch);
+        router.get('/api/v1/salesReport', Controller.salesReport);
+        router.get('/api/v1/stock-report', Controller.stockReport);
         app.use(router);
     } catch (err) {
         console.log(err);

@@ -10,6 +10,11 @@ const Price = sequelize.define("price", {
         allowNull: false,
         primaryKey: true
     },
+    batch: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+    },
     purchasePrice: {
         type: Sequelize.FLOAT,
         allowNull: false,
